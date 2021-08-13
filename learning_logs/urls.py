@@ -10,5 +10,7 @@ urlpatterns = [
         # Output all topics.
         path('topics', views.topics, name='topics'),
         # Page with detailed information on a separate topic.
-        path(r'^topics/(?P<topic_id>\d+)$', views.topic, name='topic'),
+        path('topic', views.topic, name='topic'),
+        # Page to add a new topic.
+        path('new_topic', views.new_topic, name='new_topic'),
 ]
