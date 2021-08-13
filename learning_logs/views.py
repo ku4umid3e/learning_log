@@ -1,9 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 
 from .models import Topic
-from .forms import TopicForms
+from .forms import TopicForm
 
 # Create your views here.
 def index(request):
@@ -30,7 +30,7 @@ def new_topic(request):
         form =TopicForm()
     else:
         # POST data sent; process data.
-        from = TopicForm(request.POST)
+        form = TopicForm(request.POST)
         if form.is_valid():
             form.save()
             return HttpResponseRedirect(reverse('learning_logs:topics'))
