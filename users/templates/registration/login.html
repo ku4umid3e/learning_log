@@ -10,12 +10,12 @@ Login
 {% endblock page_header %}
 
 {% block content %}
-  <from method="post" action="{% url 'users:login' %}" class="form">
+  <form method="post" action="{% url 'users:login' %}" class="form">
     {% csrf_token %}
     {% bootstrap_form form %}
     {% buttons %}
       <button name="submit" class="btn btn-primary">Log in</button>
-    {% endbuttons%}
+    {% endbuttons %}
 
     <input type="hidden" name="next"
       value="{% url 'learning_logs:index' %}" />
