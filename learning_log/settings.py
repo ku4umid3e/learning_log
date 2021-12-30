@@ -31,8 +31,12 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # My applications.
     'learning_logs',
     'users',
+    # Third-party applications.
+    'bootstrap4',
+    # Django aplications.
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -127,5 +131,10 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#My settings
+# My settings
 LOGIN_URL = '/users/login/'
+
+# Heroku settings
+import django_heroku
+django_heroku.settings(locals())
+
