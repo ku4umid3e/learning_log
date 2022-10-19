@@ -100,3 +100,8 @@ def edit_entry(request, entry_id):
 def check_topic_owner(topic_created, this_user):
     if topic_created != this_user:
         raise Http404
+
+
+def about(request):
+    """A page with a resume of the creator of this site"""
+    return render(request, 'learning_logs/about.html')

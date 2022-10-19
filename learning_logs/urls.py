@@ -7,6 +7,8 @@ app_name = 'learning_logs'
 urlpatterns = [
         # Home page
         path('', views.index, name='index'),
+        # About page
+        path('about', views.about, name='about'),
         # Output all topics.
         re_path(r'^topics/$', views.topics, name='topics'),
         # Page with detailed information on a separate topic.
