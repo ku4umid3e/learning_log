@@ -1,0 +1,6 @@
+Django>=5.2.17,<5.3
+django-bootstrap4>=26.1,<27
+dj-database-url>=3,<4
+gunicorn>=26.2,<27
+psycopg2-binary>=2.9.10,<3
+whitenoise>=6.11,<7
